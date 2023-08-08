@@ -71,3 +71,19 @@ header {
   color: var(--dark);
   font-weight: 500;
 }
+
+.footer-container {
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  border: 2px solid var(--dark);
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-block: 2rem;
+}
