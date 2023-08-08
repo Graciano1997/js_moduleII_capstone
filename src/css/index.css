@@ -20,8 +20,6 @@
 
 body {
   background-color: #fff;
-  height: 100vh;
-  position: relative;
 }
 
 header {
@@ -86,4 +84,63 @@ footer {
   align-items: center;
   justify-content: center;
   padding-block: 2rem;
+}
+
+.section-main {
+  margin-top: 2%;
+}
+
+.moovie-list-container {
+  display: grid;
+  grid-template: repeat(2,1fr) / repeat(3,1fr);
+  justify-items: center;
+}
+
+.moovie-item {
+display: grid;
+grid-template: 1fr 1fr 1fr / 1fr;
+width: 75%;
+height: 450px;
+margin-top: 10%
+}
+
+.moovie-item-likes, .moovie-item-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.moovie-item-image-container {
+display: grid;
+grid-template: 300px / 1fr;
+}
+
+.moovie-item-image-description {
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.moovie-item-image {
+  width: 100%;
+  height: 100%;
+}
+
+.moovie-item-options {
+  margin-top: 6%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  align-items: center;
+  gap: 10px;
+}
+
+.moovie-item-options button {
+  width: fit-content;
+}
+
+.heart { text-align: end;}
+
+.hide {
+  display: none;
 }
