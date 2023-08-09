@@ -1,4 +1,8 @@
-const tvmaze_api_url = 'https://api.tvmaze.com/shows/';
-const involvement_api_url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/je2Vegs80G6CzuBDSZFc/';
+const tvmazeApiUrl = 'https://api.tvmaze.com/shows/';
+const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/je2Vegs80G6CzuBDSZFc/';
+const moovItemImage = document.querySelectorAll('.moovie-item-image');
+const moovItemName = document.querySelectorAll('.item-name');
 
-export { tvmaze_api_url, involvement_api_url };
+export {
+  tvmazeApiUrl, involvementApiUrl, moovItemImage, moovItemName,
+};

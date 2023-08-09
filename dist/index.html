@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4abd53bd39.js" crossorigin="anonymous"></script>
     <title>Capstone</title>
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+
 <body class="container">
     <header>
         <nav class="nav-items">
@@ -22,134 +25,133 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-container">
         <section class="section-main">
-                <div class="moovie-list-container">
-
-                    <div class="moovie-item">
-                        <div class="moovie-item-image-container">
-                            <div class="moovie-item-picture">
-                                <img src="" alt="" class="moovie-item-image">
-                            </div>
-                            <div class="moovie-item-image-description">
-                                <h4 class="item-name">Name</h4>
-                                <div class="moovie-item-likes">
-                                    <p class="heart">&hearts;</p>
-                                    <p>25 Likes</p>
-                                </div>
-                            </div>
+            <div class="moovie-list-container">
+                <div class="moovie-item">
+                    <div class="moovie-item-image-container">
+                        <div class="moovie-item-picture">
+                            <img src="" alt="" class="moovie-item-image">
                         </div>
-                        <div class="moovie-item-options">
-                            <button type="button">Coment</button>
-                            <button type="button">Reservation</button>
+                        <div class="moovie-item-image-description">
+                            <h4 class="item-name">Name</h4>
+                            <div class="moovie-item-likes">
+                                <p class="heart"><i class="fa-regular fa-heart" id="like"></i></p>
+                                <p class="likes-number">25 Likes </p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="moovie-item">
-                        <div class="moovie-item-image-container">
-                            <div class="moovie-item-picture">
-                                <img src="" alt="" class="moovie-item-image">
-                            </div>
-                            <div class="moovie-item-image-description">
-                                <h4 class="item-name">Name</h4>
-                                <div class="moovie-item-likes">
-                                    <p class="heart">&hearts;</p>
-                                    <p>25 Likes</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="moovie-item-options">
-                            <button type="button">Coment</button>
-                            <button type="button">Reservation</button>
-                        </div>
-                    </div>
-
-                    <div class="moovie-item">
-                        <div class="moovie-item-image-container">
-                            <div class="moovie-item-picture">
-                                <img src="" alt="" class="moovie-item-image">
-                            </div>
-                            <div class="moovie-item-image-description">
-                                <h4 class="item-name">Name</h4>
-                                <div class="moovie-item-likes">
-                                    <p class="heart">&hearts;</p>
-                                    <p>25 Likes</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="moovie-item-options">
-                            <button type="button">Coment</button>
-                            <button type="button">Reservation</button>
-                        </div>
-                    </div>
-                    
-                    <div class="moovie-item">
-                        <div class="moovie-item-image-container">
-                            <div class="moovie-item-picture">
-                                <img src="" alt="" class="moovie-item-image">
-                            </div>
-                            <div class="moovie-item-image-description">
-                                <h4 class="item-name">Name</h4>
-                                <div class="moovie-item-likes">
-                                    <p class="heart">&hearts;</p>
-                                    <p>25 Likes</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="moovie-item-options">
-                            <button type="button">Coment</button>
-                            <button type="button">Reservation</button>
-                        </div>
-                    </div>
-                    
-                    <div class="moovie-item">
-                        <div class="moovie-item-image-container">
-                            <div class="moovie-item-picture">
-                                <img src="" alt="" class="moovie-item-image">
-                            </div>
-                            <div class="moovie-item-image-description">
-                                <h4 class="item-name">Name</h4>
-                                <div class="moovie-item-likes">
-                                    <p class="heart">&hearts;</p>
-                                    <p>25 Likes</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="moovie-item-options">
-                            <button type="button">Coment</button>
-                            <button type="button">Reservation</button>
-                        </div>
-                    </div>
-                    
-                    <div class="moovie-item">
-                        <div class="moovie-item-image-container">
-                            <div class="moovie-item-picture">
-                                <img src="" alt="" class="moovie-item-image">
-                            </div>
-                            <div class="moovie-item-image-description">
-                                <h4 class="item-name">Name</h4>
-                                <div class="moovie-item-likes">
-                                    <p class="heart">&hearts;</p>
-                                    <p>25 Likes</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="moovie-item-options">
-                            <button type="button">Coment</button>
-                            <button type="button">Reservation</button>
-                        </div>
+                    <div class="moovie-item-options">
+                        <button type="button">Comments</button>
+                        <button type="button" id="btn-reserve">Reservation</button>
                     </div>
                 </div>
-          </section>
+
+                <div class="moovie-item">
+                    <div class="moovie-item-image-container">
+                        <div class="moovie-item-picture">
+                            <img src="" alt="" class="moovie-item-image">
+                        </div>
+                        <div class="moovie-item-image-description">
+                            <h4 class="item-name">Name</h4>
+                            <div class="moovie-item-likes">
+                                <p class="heart"><i class="fa-regular fa-heart" id="like"></i></p>
+                                <p class="likes-number">25 Likes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moovie-item-options">
+                        <button type="button">Comments</button>
+                        <button type="button" id="btn-reserve">Reservation</button>
+                    </div>
+                </div>
+
+                <div class="moovie-item">
+                    <div class="moovie-item-image-container">
+                        <div class="moovie-item-picture">
+                            <img src="" alt="" class="moovie-item-image">
+                        </div>
+                        <div class="moovie-item-image-description">
+                            <h4 class="item-name">Name</h4>
+                            <div class="moovie-item-likes">
+                                <p class="heart"><i class="fa-regular fa-heart" id="like"></i></p>
+                                <p class="likes-number">25 Likes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moovie-item-options">
+                        <button type="button">Comments</button>
+                        <button type="button" id="btn-reserve">Reservation</button>
+                    </div>
+                </div>
+
+                <div class="moovie-item">
+                    <div class="moovie-item-image-container">
+                        <div class="moovie-item-picture">
+                            <img src="" alt="" class="moovie-item-image">
+                        </div>
+                        <div class="moovie-item-image-description">
+                            <h4 class="item-name">Name</h4>
+                            <div class="moovie-item-likes">
+                                <p class="heart"><i class="fa-regular fa-heart" id="like"></i></p>
+                                <p class="likes-number">25 Likes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moovie-item-options">
+                        <button type="button">Comments</button>
+                        <button type="button" id="btn-reserve">Reservation</button>
+                    </div>
+                </div>
+
+                <div class="moovie-item">
+                    <div class="moovie-item-image-container">
+                        <div class="moovie-item-picture">
+                            <img src="" alt="" class="moovie-item-image">
+                        </div>
+                        <div class="moovie-item-image-description">
+                            <h4 class="item-name">Name</h4>
+                            <div class="moovie-item-likes">
+                                <p class="heart"><i class="fa-regular fa-heart" id="like"></i></p>
+                                <p class="likes-number">25 Likes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="moovie-item-options">
+                        <button type="button">Comments</button>
+                        <button type="button" id="btn-reserve">Reservation</button>
+                    </div>
+                </div>
+
+                <div class="moovie-item">
+                    <div class="moovie-item-image-container">
+                        <div class="moovie-item-picture">
+                            <img src="" alt="" class="moovie-item-image">
+                        </div>
+                        <div class="moovie-item-image-description">
+                            <h4 class="item-name">Name</h4>
+                            <div class="moovie-item-likes">
+                                <p class="heart"><i class="fa-regular fa-heart" id="like"></i></p>
+                                <p class="likes-number">25 Likes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moovie-item-options">
+                        <button type="button">Comments</button>
+                        <button type="button" id="btn-reserve">Reservation</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
-
-
+    
     <footer>
-    <section class="footer-container hide">
+        <section class="">
             <span>Created by Microverse under CC Licence</span>
         </section>
     </footer>
 </body>
+
 </html>

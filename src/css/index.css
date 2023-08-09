@@ -12,26 +12,32 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'montserrat', sans-serif;
   text-decoration: none;
   list-style-type: none;
 }
 
-body {
-  background-color: #fff;
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  width: 100vw;
+  display: flex;
+  width: 100%;
   background: var(--light);
-  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
   display: flex;
   border: 1px solid var(--dark);
   border-radius: 50%;
+  margin-left: 2rem;
 }
 
 .logo h2 {
@@ -44,8 +50,9 @@ header {
 }
 
 .nav-items {
-  margin: auto 1rem;
-  padding: 1rem 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 3rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -53,16 +60,12 @@ header {
 }
 
 .nav-list {
-  display: block;
+  display: flex;
 }
 
 .nav-list ul {
   display: flex;
   gap: 2rem;
-}
-
-.nav-list ul li {
-  padding: 0.5rem;
 }
 
 .nav-list ul li a {
@@ -71,47 +74,49 @@ header {
 }
 
 .footer-container {
-  width: 100vw;
   display: flex;
-  position: absolute;
-  bottom: 0;
   border: 2px solid var(--dark);
 }
 
 footer {
+  margin-top: 5%;
+  bottom: 0;
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
   padding-block: 2rem;
+  border: 2px solid var(--dark);
 }
 
 .section-main {
+  display: flex;
+  flex-direction: column;
   margin-top: 2%;
 }
 
 .moovie-list-container {
   display: grid;
-  grid-template: repeat(2,1fr) / repeat(3,1fr);
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   justify-items: center;
+  row-gap: 3%;
 }
 
 .moovie-item {
-display: grid;
-grid-template: 1fr 1fr 1fr / 1fr;
-width: 75%;
-height: 450px;
-margin-top: 10%
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr;
+  width: 75%;
+  height: 70vh;
 }
 
-.moovie-item-likes, .moovie-item-options {
+.moovie-item-likes,
+.moovie-item-options {
   display: flex;
   flex-direction: column;
 }
 
 .moovie-item-image-container {
-display: grid;
-grid-template: 300px / 1fr;
+  display: grid;
+  grid-template: 300px / 1fr;
 }
 
 .moovie-item-image-description {
@@ -128,18 +133,34 @@ grid-template: 300px / 1fr;
 }
 
 .moovie-item-options {
-  margin-top: 6%;
-  padding-top: 2%;
+  margin-top: 2%;
   padding-bottom: 2%;
   align-items: center;
   gap: 10px;
 }
 
 .moovie-item-options button {
-  width: fit-content;
+  padding: 2%;
+  width: 90%;
 }
 
-.heart { text-align: end;}
+#btn-reserve {
+  width: 95%;
+}
+
+.heart {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+}
+
+.likes-number {
+  margin-top: 20%;
+}
+
+#like {
+  cursor: pointer;
+}
 
 .hide {
   display: none;
