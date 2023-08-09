@@ -13,5 +13,5 @@ export {
   involvementApiUrl,
   moovId,
   moovItem,
-  btnLike
+  btnLike,
 };

@@ -25,12 +25,11 @@ const likeMoov = async (id) => {
   await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UnDNHjpxcbjncx6bRyQ1/likes', {
     method: 'POST',
     body: JSON.stringify({
-      item_id: id
+      item_id: id,
     }),
-    headers: { 'Content-type': 'application/json; charset=UTF-8' }
-  })
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+  });
   window.location.reload();
-}
-
+};
 
 export { initiatizeAllMoovies, fullMoovArray, likeMoov };
