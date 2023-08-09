@@ -4,5 +4,8 @@ const moovItemImage = document.querySelectorAll('.moovie-item-image');
 const moovItemName = document.querySelectorAll('.item-name');
 
 export {
-  tvmazeApiUrl, involvementApiUrl, moovItemImage, moovItemName,
+  moovItemName,
+  tvmazeApiUrl,
+  moovItemImage,
+  involvementApiUrl,
 };
