@@ -1,24 +1,24 @@
-import * as Variable from "./globalVar.js";
+import * as Variable from './globalVar.js';
 
 const likeMoov = async (id) => {
   await fetch(Variable.involvementApiUrl, {
     method: 'POST',
     body: JSON.stringify({
-      item_id: id
+      item_id: id,
     }),
-    headers: { 'Content-type': 'application/json; charset=UTF-8' }
-  })
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+  });
 };
 
 const likesReader = async () => {
-  await fetch(Variable.involvementApiUrl + '/')
-    .then(response => response.json())
-    .then(json => {
+  await fetch(`${Variable.involvementApiUrl}/`)
+    .then((response) => response.json())
+    .then((json) => {
       document.querySelectorAll('.likes-number').forEach((itemLike, index) => {
         itemLike.textContent = (json[index].likes > 1) ? (`${json[index].likes} Likes`) : (`${json[index].likes} Like`);
-      })
-    })
-}
+      });
+    });
+};
 
 const initializeLikes = () => {
   document.querySelectorAll('.heart').forEach((moovitem, index) => {
