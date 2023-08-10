@@ -20,7 +20,7 @@ const initiatizeAllMoovies = () => {
       displayMoov(index);
     }
   });
-  Variable.mooviesNumber.textContent= counterItem('.moovie-list-container');
+  Variable.mooviesNumber.textContent = counterItem('.moovie-list-container');
 };
 
 export { initiatizeAllMoovies, fullMoovArray };
