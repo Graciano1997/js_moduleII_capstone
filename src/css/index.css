@@ -152,16 +152,17 @@ footer {
   text-align: center;
   color: black;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .likes-number {
   margin-top: 20%;
 }
 
-.like {
-  cursor: pointer;
-}
-
 .hide {
   display: none;
+}
+
+.red {
+  color: red;
 }
