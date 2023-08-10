@@ -1,4 +1,5 @@
 import * as Variable from './globalVar.js';
+import counterItem from './itemCounter.js';
 
 const fullMoovArray = [];
 
@@ -19,6 +20,7 @@ const initiatizeAllMoovies = () => {
       displayMoov(index);
     }
   });
+  Variable.mooviesNumber.textContent = counterItem('.moovie-list-container');
 };
 
 export { initiatizeAllMoovies, fullMoovArray };
