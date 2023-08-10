@@ -15,21 +15,10 @@ const displayMoov = async (id) => {
 
 const initiatizeAllMoovies = () => {
   window.addEventListener('DOMContentLoaded', () => {
-    for (let index = 1; index < 7; index += 1) {
+    for (let index = 1; index < 10; index += 1) {
       displayMoov(index);
     }
   });
 };
 
-const likeMoov = async (id) => {
-  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UnDNHjpxcbjncx6bRyQ1/likes', {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: id,
-    }),
-    headers: { 'Content-type': 'application/json; charset=UTF-8' },
-  });
-  window.location.reload();
-};
-
-export { initiatizeAllMoovies, fullMoovArray, likeMoov };
+export { initiatizeAllMoovies, fullMoovArray };
