@@ -5,6 +5,8 @@ const moovItemName = document.querySelectorAll('.item-name');
 const moovId = document.querySelectorAll('.moovieId');
 const moovItem = document.querySelectorAll('.moovie-item');
 const btnLike = document.querySelectorAll('.like');
+const moovieList = document.querySelectorAll('.moovie-list-container');
+const mooviesNumber = document.querySelector('.mooviesNumber');
 
 export {
   moovItemName,
@@ -14,4 +16,6 @@ export {
   moovId,
   moovItem,
   btnLike,
+  moovieList,
+  mooviesNumber
 };
