@@ -1,6 +1,9 @@
 const counterItem = (containerIdentificator) => {
   const element = document.querySelector(containerIdentificator);
-  return element.childElementCount;
+  if (element !== null) {
+    return element.childElementCount;
+  }
+  return null;
 };
 
 export default counterItem;
