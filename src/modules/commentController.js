@@ -24,6 +24,7 @@ const commentsReader = async (id) => {
         json.forEach((comment) => {
           document.querySelector('.user-comments').append(createCommenter(comment, 'p'));
         });
+        // display counter items in the container
         document.querySelector('#commentsCounter').innerHTML = counterItem('#comments-item');
       } else { document.querySelector('.user-comments').append(noCommentFunction()); }
     });

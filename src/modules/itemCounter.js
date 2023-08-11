@@ -1,3 +1,5 @@
+// count the number of items in a container
+
 const counterItem = (containerIdentificator) => {
   const element = document.querySelector(containerIdentificator);
   if (element !== null) {
