@@ -29,8 +29,8 @@ const seeButton = () => {
     if (index >= 5) {
       item.classList.toggle('hideItem');
     }
-  })
-}
+  });
+};
 
 const seeButtonListneer = () => {
   document.querySelector('#btnSee').addEventListener('click', () => {
@@ -41,6 +41,6 @@ const seeButtonListneer = () => {
     }
     seeButton();
   });
-}
+};
 
 export { initiatizeAllMoovies, fullMoovArray, seeButtonListneer };

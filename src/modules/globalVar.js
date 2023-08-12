@@ -1,6 +1,5 @@
 const tvmazeApiUrl = 'https://api.tvmaze.com/shows/';
 const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UnDNHjpxcbjncx6bRyQ1/';
-// https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UnDNHjpxcbjncx6bRyQ1/comments
 const moovItemImage = document.querySelectorAll('.moovie-item-image');
 const moovItemName = document.querySelectorAll('.item-name');
 const moovId = document.querySelectorAll('.moovieId');
