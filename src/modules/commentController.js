@@ -1,5 +1,5 @@
+import commenterCounter from './commenterCounter.js';
 import * as Variable from './globalVar.js';
-import counterItem from './itemCounter.js';
 
 const createCommenter = (data, type) => {
   const el = document.createElement(type);
@@ -25,7 +25,7 @@ const commentsReader = async (id) => {
           document.querySelector('.user-comments').append(createCommenter(comment, 'p'));
         });
         // display counter items in the container
-        document.querySelector('#commentsCounter').innerHTML = counterItem('#comments-item');
+        document.querySelector('#commentsCounter').innerHTML = commenterCounter();
       } else { document.querySelector('.user-comments').append(noCommentFunction()); }
     });
 };

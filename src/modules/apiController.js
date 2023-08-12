@@ -2,7 +2,6 @@ import * as Variable from './globalVar.js';
 import counterItem from './itemCounter.js';
 
 const fullMoovArray = [];
-
 const displayMoov = async (id) => {
   await fetch(Variable.tvmazeApiUrl + id)
     .then((response) => response.json())
@@ -10,18 +9,19 @@ const displayMoov = async (id) => {
       fullMoovArray.push(json);
       document.querySelectorAll('.moovie-item-image')[id - 1].classList.remove('rotate');
       document.querySelectorAll('.moovie-item-image')[id - 1].src = json.image.original;
-      Variable.moovItemName[id - 1].textContent = json.name;
-      Variable.moovId[id - 1].value = json.id;
+      document.querySelectorAll('.item-name')[id - 1].textContent = json.name;
+      document.querySelectorAll('.moovieId')[id - 1].value = json.id;
+      console.log(json.id);
     });
 };
 
 const initiatizeAllMoovies = () => {
   window.addEventListener('DOMContentLoaded', () => {
-    for (let index = 1; index < 10; index += 1) {
+    for (let index = 1; index <= counterItem(); index += 1) {
       displayMoov(index);
     }
   });
-  Variable.mooviesNumber.textContent = counterItem('.moovie-list-container');
+  Variable.mooviesNumber.textContent = counterItem();
 };
 
 const seeButton = () => {
@@ -43,4 +43,4 @@ const seeButtonListneer = () => {
   });
 };
 
-export { initiatizeAllMoovies, fullMoovArray, seeButtonListneer };
+export { initiatizeAllMoovies, fullMoovArray, seeButtonListneer, displayMoov };

@@ -1,5 +1,5 @@
-const counterItem = (containerIdentificator) => {
-  const element = document.querySelector(containerIdentificator);
+const counterItem = () => {
+  const element = document.querySelector('.moovie-list-container');
   if (element !== null) {
     return element.childElementCount;
   }

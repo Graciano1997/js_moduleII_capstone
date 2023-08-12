@@ -14,8 +14,8 @@ const likesReader = async () => {
   await fetch(`${Variable.involvementApiUrl}likes/`)
     .then((response) => response.json())
     .then((json) => {
-      document.querySelectorAll('.likes-number').forEach((itemLike, index) => {
-        itemLike.textContent = (json[index].likes > 1) ? (`${json[index].likes} Likes`) : (`${json[index].likes} Like`);
+      document.querySelectorAll('.nlike').forEach((itemLike, index) => {
+        itemLike.textContent = json[index].likes;
       });
     });
 };
@@ -25,7 +25,7 @@ const initializeLikes = () => {
     moovitem.addEventListener('click', () => {
       likeMoov(moovitem.nextElementSibling.value);
       document.querySelectorAll('#likeIcon')[index].classList.add('red');
-      likesReader();
+      document.querySelectorAll('.nlike')[index].textContent = (parseInt(document.querySelectorAll('.nlike')[index].textContent) + 1);
     });
   });
 };

@@ -29,21 +29,14 @@ describe('Testing Count Item Function ', () => {
                 </div>
                 `;
 
-    expect(counterItem('.moovie-list-container')).toEqual(1);
+    expect(counterItem()).toEqual(1);
   });
 
   test('Testing 0 moovie item', () => {
     document.body.innerHTML = `  <div class="moovie-list-container">
               </div>
               `;
-    expect(counterItem('.moovie-list-container')).toEqual(0);
-  });
-
-  test('Testing moovie wrong indentificator to Be null', () => {
-    document.body.innerHTML = `  <div class="moovie-list-container">
-              </div>
-              `;
-    expect(counterItem('.wrong_Identificator')).toBeNull();
+    expect(counterItem()).toEqual(0);
   });
 
   test('Testing moovie Counter not Be Negative', () => {
@@ -69,7 +62,7 @@ describe('Testing Count Item Function ', () => {
     </div>
               </div>
               `;
-    expect(counterItem('.moovie-list-container')).toBeGreaterThanOrEqual(0);
+    expect(counterItem()).toBeGreaterThanOrEqual(0);
   });
 
   test('Testing 9 moovie items', () => {
@@ -256,6 +249,6 @@ describe('Testing Count Item Function ', () => {
               </div>
               `;
 
-    expect(counterItem('.moovie-list-container')).toEqual(9);
+    expect(counterItem()).toEqual(9);
   });
 });

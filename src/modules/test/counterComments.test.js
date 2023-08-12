@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import counterItem from '../itemCounter.js';
+import commenterCounter from '../commenterCounter.js';
 
 describe('Testing comments numbers Item Function ', () => {
   test('Testing 1 comment', () => {
@@ -10,13 +10,14 @@ describe('Testing comments numbers Item Function ', () => {
     <p><b class="date">2023-08-11</b> Bett Enoch : <span class="comment">’’ I want to see this today!! ’’</span></p>
     </div>
     `;
-    expect(counterItem('#comments-item')).toEqual(1);
+    
+    expect(commenterCounter()).toEqual(1);
   });
 
   test('Testing 0 comment', () => {
     document.body.innerHTML = `  <div class="user-comments" id="comments-item">
     </div>`;
-    expect(counterItem('#comments-item')).toEqual(0);
+    expect(commenterCounter()).toEqual(0);
   });
 
   test('Testing comment number not Be Negative', () => {
@@ -27,6 +28,6 @@ describe('Testing comments numbers Item Function ', () => {
     <p><b class="date">2023-08-11</b> Bett Enoch : <span class="comment">’’ I want to see this film!! ’’</span></p>  
     </div>
 `;
-    expect(counterItem('#comments-item')).toBeGreaterThanOrEqual(0);
+    expect(commenterCounter()).toBeGreaterThanOrEqual(0);
   });
 });
