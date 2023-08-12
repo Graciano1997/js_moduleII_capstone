@@ -6,7 +6,7 @@ import { initializeLikes, likesReader } from './modules/likeController.js';
 import getMoov from './modules/popupModal.js';
 import setLoadingImage from './modules/setLoadingImage.js';
 
-itemCreator(30);
+itemCreator(12);
 setLoadingImage();
 initiatizeAllMoovies();
 initializeLikes();
