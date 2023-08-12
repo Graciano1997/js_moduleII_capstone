@@ -13,6 +13,7 @@ const commentListener = () => {
     document.querySelector('.form').reset();
   });
 };
+
 const popup = () => {
   const popupContainer = document.querySelector('.popup-container');
   const sectionCommenter = document.createElement('section');

@@ -8,7 +8,8 @@ const displayMoov = async (id) => {
     .then((response) => response.json())
     .then((json) => {
       fullMoovArray.push(json);
-      Variable.moovItemImage[id - 1].src = json.image.original;
+      document.querySelectorAll('.moovie-item-image')[id - 1].classList.remove('rotate');
+      document.querySelectorAll('.moovie-item-image')[id - 1].src = json.image.original;
       Variable.moovItemName[id - 1].textContent = json.name;
       Variable.moovId[id - 1].value = json.id;
     });
@@ -23,4 +24,23 @@ const initiatizeAllMoovies = () => {
   Variable.mooviesNumber.textContent = counterItem('.moovie-list-container');
 };
 
-export { initiatizeAllMoovies, fullMoovArray };
+const seeButton = () => {
+  document.querySelectorAll('.moovie-item').forEach((item, index) => {
+    if (index >= 5) {
+      item.classList.toggle('hideItem');
+    }
+  })
+}
+
+const seeButtonListneer = () => {
+  document.querySelector('#btnSee').addEventListener('click', () => {
+    if (document.querySelector('#btnSee').innerHTML === '<i class="fa-solid fa-eye-slash"></i> See Less') {
+      document.querySelector('#btnSee').innerHTML = '<i class="fa-solid fa-eye"></i> See More';
+    } else {
+      document.querySelector('#btnSee').innerHTML = '<i class="fa-solid fa-eye-slash"></i> See Less';
+    }
+    seeButton();
+  });
+}
+
+export { initiatizeAllMoovies, fullMoovArray, seeButtonListneer };
