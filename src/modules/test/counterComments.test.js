@@ -10,7 +10,7 @@ describe('Testing comments numbers Item Function ', () => {
     <p><b class="date">2023-08-11</b> Bett Enoch : <span class="comment">’’ I want to see this today!! ’’</span></p>
     </div>
     `;
-    
+
     expect(commenterCounter()).toEqual(1);
   });
 

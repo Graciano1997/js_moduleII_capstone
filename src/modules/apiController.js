@@ -11,7 +11,6 @@ const displayMoov = async (id) => {
       document.querySelectorAll('.moovie-item-image')[id - 1].src = json.image.original;
       document.querySelectorAll('.item-name')[id - 1].textContent = json.name;
       document.querySelectorAll('.moovieId')[id - 1].value = json.id;
-      console.log(json.id);
     });
 };
 
@@ -43,4 +42,6 @@ const seeButtonListneer = () => {
   });
 };
 
-export { initiatizeAllMoovies, fullMoovArray, seeButtonListneer, displayMoov };
+export {
+  initiatizeAllMoovies, fullMoovArray, seeButtonListneer, displayMoov,
+};

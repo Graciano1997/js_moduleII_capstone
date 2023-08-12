@@ -25,7 +25,7 @@ const initializeLikes = () => {
     moovitem.addEventListener('click', () => {
       likeMoov(moovitem.nextElementSibling.value);
       document.querySelectorAll('#likeIcon')[index].classList.add('red');
-      document.querySelectorAll('.nlike')[index].textContent = (parseInt(document.querySelectorAll('.nlike')[index].textContent) + 1);
+      document.querySelectorAll('.nlike')[index].textContent = (parseInt(document.querySelectorAll('.nlike')[index].textContent, 10) + 1);
     });
   });
 };

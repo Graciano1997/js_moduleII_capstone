@@ -21,10 +21,10 @@ const videoItemTemplate = `
 const itemCreator = (number) => {
   const moovieItemContainer = document.createElement('div');
   moovieItemContainer.classList.add('moovie-list-container');
-  for (let i = 1; i <= number; i++) {
+  for (let i = 1; i <= number; i += 1) {
     moovieItemContainer.innerHTML += videoItemTemplate;
   }
   document.querySelector('.section-main').append(moovieItemContainer);
-}
+};
 
 export default itemCreator;
