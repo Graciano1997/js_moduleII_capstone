@@ -1,5 +1,18 @@
+import { commentMoov, commentsReader } from './commentController.js';
 import * as Variable from './globalVar.js';
 
+const commentListener = () => {
+  document.querySelector('.form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = {
+      item_id: document.querySelector('.moovId').value,
+      username: document.querySelector('#userName').value,
+      comment: document.querySelector('#userComment').value,
+    };
+    commentMoov(data);
+    document.querySelector('.form').reset();
+  });
+};
 const popup = () => {
   const popupContainer = document.querySelector('.popup-container');
   const sectionCommenter = document.createElement('section');
@@ -86,6 +99,8 @@ const getMoov = () => {
           const popupContainer = document.querySelector('.popup-container');
           popupContainer.classList.remove('hide');
           popup();
+          commentListener();
+          commentsReader(json.id);
           document.querySelector('.moovId').value = json.id;
           document.querySelector('.moovie-name').innerHTML = json.name;
           document.querySelector('.image-popup').src = json.image.original;
