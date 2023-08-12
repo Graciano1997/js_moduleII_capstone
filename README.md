@@ -2,7 +2,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b>js_moduleII_capstone-Go!Moovies</b></h1>
+  <h1><b>Javascript-Module2-Capstone-Go!Moovies</b></h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -142,9 +142,9 @@ npm run build
 
 - GitHub: [@Graciano1997](https://github.com/Graciano1997)
 
-👤 Faiz Mohammad
+👤 Bett Enock
 
-- GitHub: [@the-faizMohamm](https://github.com/the-faizMohamm)
+- GitHub: [@Bettenoch](https://github.com/Bettenoch)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,6 +153,10 @@ npm run build
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Using css theme**
+- [ ] **Add reservation popup**
+- [ ] **Add more animation**
+
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
